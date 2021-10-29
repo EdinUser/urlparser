@@ -5,7 +5,7 @@ This is a simple URL parser, which returns an array of results from url of kind 
 
 The parser also returns Breadcrumb array, if provided with a names for it (either hard coded or via DB/any other array.
 
-##Usage:
+## Usage:
 
 Current url: https://example.com/module/method1/param:1/param2:3,5,6/param3:test
 
@@ -13,7 +13,7 @@ Current url: https://example.com/module/method1/param:1/param2:3,5,6/param3:test
 $getUrlDetails = (new SimpleUrlParser)->parseUrlForResults();
 ```
 
-Result:
+## Result:
 ```php
 Array
 (
