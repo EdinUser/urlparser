@@ -3,9 +3,9 @@ Simple URL parser
 
 This is a simple URL parser, which returns an array of results from url of kind /module/controller/param1:value/param2:value,value
 
-The parser also returns Breadcrumb array, if provided with a file with names from it.
+The parser also returns Breadcrumb array, if provided with a names for it (either hard coded or via DB/any other array.
 
-Usage:
+##Usage:
 
 Current url: https://example.com/module/method1/param:1/param2:3,5,6/param3:test
 
