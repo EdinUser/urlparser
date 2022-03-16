@@ -42,7 +42,7 @@ Array
 
 )
 ```
-###Build URL from an array
+### Build URL from an array
 
 ```php
 use Fallenangelbg\SimpleUrlParser;
@@ -63,7 +63,7 @@ $arrayToBeBuild = array
 $getUrlDetails = (new SimpleUrlParser)->buildUrlByParams($arrayToBeBuild);
 echo $getUrlDetails;
 ```
-####Result
+#### Result
 ```html
 /module/method1/param:1/param2:3,5,6
 ```
