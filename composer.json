@@ -2,6 +2,7 @@
     "name": "fallenangelbg/simpleurlparser",
     "description": "Parse url",
     "type": "library",
+    "license": "MIT",
     "require": {
         "php": ">=5.6"
     },
