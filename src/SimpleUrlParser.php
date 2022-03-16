@@ -152,4 +152,38 @@ class SimpleUrlParser
 
         return $newUrl;
     }
+
+    /**
+     * Build an URL by post data. The $_POST data must contain only 'params' section. This method can build url base on <input> entries
+     * @param string $baseUrl
+     * @param array $postDataForm
+     *
+     * @return string
+     */
+    public function buildUrlByPOST(string $baseUrl = '/', array $postDataForm = array()): string
+    {
+        $returnUrl = $baseUrl;
+
+        $skipKeys = array(
+          "switch" => 1,
+        );
+
+        foreach ($postDataForm as $postKey => $postData) {
+            if (!empty($skipKeys[$postKey]) || empty($postData)) {
+                continue;
+            }
+
+            if (is_array($postData)) {
+                $postData = array_filter($postData);
+                if (!empty($postData)) {
+                    $postData = implode(",", $postData);
+                    $returnUrl .= "/" . $postKey . ":" . $postData;
+                }
+            } else {
+                $returnUrl .= "/" . $postKey . ":" . $postData;
+            }
+        }
+
+        return $returnUrl;
+    }
 }
