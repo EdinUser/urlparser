@@ -1,8 +1,10 @@
 {
     "name": "fallenangelbg/simpleurlparser",
-    "description": "Parse url",
+    "description": "Parse url to a PHP array",
+    "keywords": ["parse", "parser", "URL", "URL parser"],
     "type": "library",
     "license": "MIT",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.6"
     },
