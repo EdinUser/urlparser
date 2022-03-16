@@ -2,6 +2,7 @@
 /**
  * Simple URL parser. Parse url as follows: /[module]/[switch]/[param1]:[value1]/[param2]:[/value2]...
  */
+
 namespace Fallenangelbg\SimpleUrlParser;
 
 class SimpleUrlParser
@@ -24,19 +25,20 @@ class SimpleUrlParser
     public function __construct()
     {
         $this->modulesNames = array(
-            "module1" => "Name 1",
-            "module2" => "Name 2",
+          "module1" => "Name 1",
+          "module2" => "Name 2",
         );
         $this->methodsNames = array(
-            "module2" => array(
-                "method1" => "Method 1",
-                "method2" => "Method 2",
-            ),
+          "module2" => array(
+            "method1" => "Method 1",
+            "method2" => "Method 2",
+          ),
         );
     }
 
     /**
      * @param false $skipDigitConvert If set to true, any digit-like value will be forced convert to number
+     *
      * @return array Array with results from the URL
      */
     function parseUrlForResults(bool $skipDigitConvert = false): array
@@ -125,5 +127,29 @@ class SimpleUrlParser
         }
 
         return $returnArray;
+    }
+
+    /**
+     * Build URL from an array
+     *
+     * @param array $params Array with params, from which to build the URL. Format: $array['module'], $array['switch'], $array['params']['param1]=$value1;
+     *
+     * @return string The url, which can be parsed by @internal parseUrlForResults
+     */
+    function buildUrlByParams(array $params): string
+    {
+        $newUrl = '';
+        if (!empty($params['module'])) {
+            $newUrl = "/" . $params['module'];
+        }
+        if (!empty($params['switch'])) {
+            $newUrl .= "/" . $params['switch'];
+        }
+
+        foreach ($params['params'] as $paramName => $paramValue) {
+            $newUrl .= "/" . $paramName . ":" . $paramValue;
+        }
+
+        return $newUrl;
     }
 }
