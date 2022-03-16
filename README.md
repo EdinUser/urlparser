@@ -1,6 +1,4 @@
-# urlparser
-Simple URL parser
-
+# Simple URL Parser
 This is a simple URL parser, which returns an array of results from url of kind /module/controller/param1:value/param2:value,value
 
 The parser also returns Breadcrumb array, if provided with a names for it (either hard coded or via DB/any other array.
