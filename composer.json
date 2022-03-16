@@ -1,0 +1,19 @@
+{
+    "name": "fallenangelbg/simpleurlparser",
+    "description": "Parse url",
+    "type": "library",
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fallenangelbg\\SimpleUrlParser\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Todor Kirilov",
+            "email": "fallenangelbg@protonmail.com"
+        }
+    ]
+}

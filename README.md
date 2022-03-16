@@ -7,7 +7,7 @@ The parser also returns Breadcrumb array, if provided with a names for it (eithe
 
 ## Usage:
 
-Current url: https://example.com/module/method1/param:1/param2:3,5,6/param3:test
+Example url: https://example.com/module/method1/param:1/param2:3,5,6/param3:test
 
 ```php
 $getUrlDetails = (new SimpleUrlParser)->parseUrlForResults();
